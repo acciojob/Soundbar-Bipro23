@@ -1,16 +1,44 @@
 //your JS code here. If required.
-//your JS code here. If required.
-let sound=["applause.mp3","boo.mp3","gasp.mp3","tada.mp3","victory.mp3","wrong.mp3"];
-let btns=document.getElementsByClassName("btn");
-let stop=document.querySelector(".stop")
-let audio;
-console.log(btns);
-for(i =0;i<btns.length;i++){
-    btns[i].addEventListener("click",()=>{
-        audio=new Audio(`sounds/${sound[i]}`)
-        audio.play();
-    });
+let audios = [
+	"applause",
+	"boo",
+	"gasp",
+	"tada",
+	"victory",
+	"wrong",
+]
+
+let activeAudio = null;
+
+const button = document.getElementsByClassName(".btn");
+
+function playAudio(){
+    stopAudio();
+	activeAudio.play();
 }
-stop.addEventListener("click",()=>{
-    audio.pause();
-});
+
+function stopAudio(){
+	if(activeAudio){
+		activeAudio.pause();
+    // activeAudio = null;
+	}
+}
+
+for(let i=0; i<button.length; i++){
+	button[i].addEventListener("click", (event) =>{
+		let innerText = event.target.innerText;
+    
+		if(audios.includes(innerText)){
+
+			let audioElement = document.createElement("audio");
+			audioElement.src = `https://samplelib.com/lib/preview/mp3/sample-12s.mp3`;
+			audioElement.controls = true;
+			activeAudio = audioElement;
+			playAudio();
+		}
+    
+    else{
+      stopAudio();
+    }
+	})
+}

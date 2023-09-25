@@ -1,29 +1,18 @@
 /*  your css code here. If applicable */
-/*  your css code here. If applicable */
-.buttons{
-  height: 500px;
-  width: 100%;
-  background: rgb(192, 97, 254);
-  display: flex;
-  justify-content:space-evenly ;
-  align-items: center;
-  margin: auto;
+.container{
+	background-color:violet;
+	padding:50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:15px;
 }
-.btn {
-  width: 100px;
-  height: 50px;
-  background: rgb(110, 7, 173);
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-}
-.stop{
-  width: 100px;
-  height: 50px;
-  background: rgb(110, 7, 173);
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
+
+.container .btn{
+	background-color:purple;
+	padding:8px 15px;
+	border:none;
+	border-radius:2px;
+	color:white;
+	cursor:pointer;
 }
