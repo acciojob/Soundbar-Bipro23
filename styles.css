@@ -1,18 +1,22 @@
-/*  your css code here. If applicable */
-.container{
-	background-color:violet;
-	padding:50px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	gap:15px;
+#buttons{
+	column-gap:10px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background: #a164df;
+	height:400px;
+	width: 100%;
+}
+.btn{
+	cursor:pointer;
+	border-radius:3px;
+	width:80px;
+	padding: 12px;
+	border:none;
+	color:white;
+	background: #663399ff;
 }
 
-.container .btn{
-	background-color:purple;
-	padding:8px 15px;
-	border:none;
-	border-radius:2px;
-	color:white;
-	cursor:pointer;
+audio {
+    display: none;
 }
